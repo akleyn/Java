@@ -1,0 +1,2 @@
+CA,California,7.25
+OH,Ohio,6.25

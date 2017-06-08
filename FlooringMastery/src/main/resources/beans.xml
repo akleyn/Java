@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop-3.2.xsd">
+
+    <context:property-placeholder location="classpath:app.properties"/>
+
+    <bean id="controller" class="com.swccorp.flooring.controller.FlooringMasteryController">
+        <constructor-arg ref="view"/>
+        <constructor-arg ref="orderService"/>
+    </bean>
+
+    <bean id="orderService" class="com.swccorp.flooring.service.OrderService" factory-method="create">
+        <constructor-arg value="${mode}"/>
+        <constructor-arg ref="orderDao"/>
+        <constructor-arg ref="newOrderDao"/>
+        <constructor-arg ref="updateOrderDao"/>
+        <constructor-arg ref="taxDao"/>
+        <constructor-arg ref="productDao"/>
+    </bean>
+
+    <bean id="view" class="com.swccorp.flooring.view.FlooringMasteryConsoleView">
+        <constructor-arg ref="io"/>
+    </bean>
+
+    <bean id="io" class="com.swccorp.flooring.view.ConsoleUserIO"/>
+
+    <bean id="orderDao" class="com.swccorp.flooring.dao.FileOrderDao">
+        <constructor-arg value="${orders.directory}"/>
+        <constructor-arg ref="taxDao"/>
+        <constructor-arg ref="productDao"/>
+
+    </bean>
+
+
+    <bean id="newOrderDao" class="com.swccorp.flooring.dao.FileNewOrderRequestDao">
+        <constructor-arg value="${orders.directory}"/>
+    </bean>
+
+    <bean id="updateOrderDao" class="com.swccorp.flooring.dao.FileUpdateOrderRequestDao">
+        <constructor-arg value="${orders.directory}"/>
+    </bean>
+
+    <bean id="productDao" class="com.swccorp.flooring.dao.FileProductDao" init-method="init">
+        <constructor-arg value="${products.file}"/>
+    </bean>
+
+    <bean id="taxDao" class="com.swccorp.flooring.dao.FileTaxDao" init-method="init">
+        <constructor-arg value="${taxes.file}"/>
+    </bean>
+
+    <bean id="auditDao" class="com.swccorp.flooring.dao.FileAuditDao">
+        <constructor-arg value="${audit.file}"/>
+    </bean>
+
+    <bean id="loggingAdvice" class="com.swccorp.flooring.advice.LoggingAdvice">
+        <constructor-arg ref="auditDao"/>
+    </bean>
+
+    <aop:config>
+        <aop:aspect ref="loggingAdvice">
+            <aop:after-returning
+                    method="logMethodReturned"
+                    pointcut="execution(* com.swccorp.flooring.service.OrderService.*(..))"
+                    returning="returnValue"/>
+            <aop:after-throwing
+                    method="logMethodThrewException"
+                    pointcut="execution(* com.swccorp.flooring.service.OrderService.*(..))"
+                    throwing="e"/>
+        </aop:aspect>
+    </aop:config>
+</beans>
