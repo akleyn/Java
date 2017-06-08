@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/home.css">
+        <script src="js/jquery-2.2.4.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/home.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <h2 class="main-header">Vending Machine</h2>
+            <ul class="list-group">
+                <li class="list-group-item list-group-item-danger" id="error-message" style="display: none; text-align: center;"></li>
+                <li class="list-group-item list-group-item-success" id="thankyou-message" style="display: none; text-align: center;">Thank you!!!</li>
+                <li class="list-group-item list-group-item-info" id="info-message" style="display: none; text-align: center;"></li>
+            </ul>
+            <div class="row">
+                <div class="col-lg-7" id="goods">
+                    <br>
+                </div>
+                <div class="col-lg-3 col-lg-offset-1">
+
+                    <div class="row right-side-botoom-border-container">
+                        <h4 class="header">Total $ in</h4>
+                        <div class="row">
+                            <input class="form-control main-input" type="text" value="0.00" disabled="disabled" id="total">
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <button class="btn btn-default col-lg-10 col-lg-offset-1" onclick="addTotal(1)">Add Dollar</button>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <button class="btn btn-default col-lg-10 col-lg-offset-1" onclick="addTotal(0.25)">Add Quarter</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <button class="btn btn-default col-lg-10 col-lg-offset-1" onclick="addTotal(0.1)">Add Dime</button>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <button class="btn btn-default col-lg-10 col-lg-offset-1" onclick="addTotal(0.05)">Add Nickel</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                    </div>
+
+                    <div class="row right-side-botoom-border-container">
+                        <h4 class="header">Messages</h4>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <h5 class="control-label col-lg-3 col-lg-offset-3">Item:</h5>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <input class="form-control col-lg-10 col-lg-offset-1" value="" disabled="disabled" id="item">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <button class="btn btn-default col-lg-10 col-lg-offset-1" id="makepurchase">Make Purchase</button>
+                            </div>
+                        </div>
+                        <br>
+                    </div>
+
+                    <div class="row">
+                        <h4 class="header">Change</h4>
+                        <div class="row">
+                            <button class="btn btn-default col-lg-10 col-lg-offset-1" id="return">Return</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
