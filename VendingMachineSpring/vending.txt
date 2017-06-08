@@ -1,0 +1,18 @@
+Cheez It::1.25::6
+Dorito's Cool Ranch::1.45::10
+Cheetos Crunchy::1.25::9
+Gardettos Original::1.25::10
+Sun Chips - Hottest Cheddar::1.95::10
+Reese's Peanut Butter Cups::1.00::10
+Famous Amos::1.25::10
+Reese's Pieces Chocolate Candy::1.00::10
+Rold Gold- Braided Twists::1.45::9
+Snickers::1.00::10
+Sun Chips - Original::1.95::10
+M&M's Original::1.00::10
+Fritos Original::1.45::5
+Hershey's Cholocate Bar::1.00::9
+Lay's Classic::1.45::10
+Austin Cheddar Cheese Crackers::1.00::10
+Tom's Potato Chips::1.95::9
+Baked! Lays- Barbeque::1.95::9

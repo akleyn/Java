@@ -1,0 +1,36 @@
+2017-03-06T20:28:28.186 : addFunds: 200
+2017-03-06T20:28:33.450 : addFunds: 200
+2017-03-06T20:28:37.857 : purchaseItem: Quantity: 0 |Cost: null |Name: Cheez It
+2017-03-06T20:28:44.033 : purchaseItem: Quantity: 0 |Cost: null |Name: Cheez It
+2017-03-06T06:54:22.771 : addFunds: 200
+2017-03-06T06:54:29.869 : purchaseItem: Quantity: 0 |Cost: null |Name: Cheez It
+2017-03-06T06:56:17.162 : addFunds: 200
+2017-03-06T06:56:21.152 : purchaseItem: Quantity: 0 |Cost: null |Name: Cheez It
+2017-03-06T22:04:49.136 : addFunds: 2
+2017-03-06T22:05:02.100 : purchaseItem: Quantity: 0 |Cost: null |Name: Hershey's Cholocate Bar
+2017-03-06T22:31:03.229 : addFunds: 2
+2017-03-06T22:32:57.336 : addFunds: 1.5
+2017-03-06T22:33:05.915 : purchaseItem: Quantity: 0 |Cost: null |Name: Rold Gold- Braided Twists
+2017-03-06T22:33:39.281 : addFunds: 1.5
+2017-03-06T22:34:35.435 : purchaseItem: Quantity: 0 |Cost: null |Name: Fritos Original
+2017-03-06T22:36:02.279 : addFunds: 1.5
+2017-03-06T22:36:58.454 : purchaseItem: Quantity: 0 |Cost: null |Name: Fritos Original
+2017-03-06T22:37:31.510 : addFunds: 1.5
+2017-03-06T22:37:38.260 : purchaseItem: Quantity: 0 |Cost: null |Name: Fritos Original
+2017-03-06T22:37:57.101 : addFunds: 1.5
+2017-03-06T22:38:07.972 : purchaseItem: Quantity: 0 |Cost: null |Name: Fritos Original
+2017-03-06T22:38:50.039 : addFunds: 1.5
+2017-03-06T22:38:55.576 : purchaseItem: Quantity: 0 |Cost: null |Name: Fritos Original
+2017-03-06T22:49:18.844 : addFunds: 1.5
+2017-03-06T22:50:10.700 : addFunds: 1.5
+2017-03-06T22:54:38.645 : addFunds: 1.5
+2017-03-06T22:55:11.861 : addFunds: 1.5
+2017-03-06T22:55:20.012 : addFunds: 1.33
+2017-03-06T22:57:47.269 : addFunds: 1.33
+2017-03-06T22:57:54.996 : addFunds: 5
+2017-03-06T22:58:08.484 : purchaseItem: Quantity: 0 |Cost: null |Name: Tom's Potato Chips
+2017-03-06T22:58:15.466 : purchaseItem: Quantity: 0 |Cost: null |Name: Baked! Lays- Barbeque
+2017-03-06T15:10:46.953 : addFunds: 200
+2017-03-06T15:11:06.364 : purchaseItem: Quantity: 0 |Cost: null |Name: Cheez It
+2017-03-06T15:13:10.620 : addFunds: 2
+2017-03-06T15:13:24.461 : purchaseItem: Quantity: 0 |Cost: null |Name: Cheez It
